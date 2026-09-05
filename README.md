@@ -473,24 +473,6 @@ Route::get('/login', [AuthController::class, 'showLogin'])
 Route::post('/login', [AuthController::class, 'login'])
     ->name('login.authenticate');
 ```
-
-### LAN cannot access application
-
-Check:
-
-1. Server IP.
-2. Apache status.
-3. Windows Firewall TCP port 80.
-4. Client-to-server connectivity.
-5. Apache configuration.
-6. Laravel `.env`.
-
-PowerShell:
-
-```powershell
-Test-NetConnection 10.130.53.87 -Port 80
-```
-
 ### Clear Laravel cache
 
 ```bash
